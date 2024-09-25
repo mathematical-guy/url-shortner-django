@@ -25,7 +25,9 @@ THIRD_PARTY_APPS = [
     'django_filters',
 ]
 
-CUSTOM_APPS = []
+CUSTOM_APPS = [
+    'common_app',
+]
 
 INSTALLED_APPS = INSTALLED_APPS + THIRD_PARTY_APPS + CUSTOM_APPS
 
