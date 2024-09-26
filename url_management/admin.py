@@ -4,4 +4,4 @@ from url_management.models import ShortenedURL
 
 @admin.register(ShortenedURL)
 class ShortenedURLAdmin(admin.ModelAdmin):
-    list_display = ["name", "original_url", "shortened_url"]
+    list_display = ["created_on", "name", "original_url", ]
