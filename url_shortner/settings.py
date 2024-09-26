@@ -6,9 +6,9 @@ config: dict = dotenv_values(dotenv_path=BASE_DIR / ".env")
 
 SECRET_KEY = config.get('DJANGO_SECRET_KEY')
 
-DEBUG = config.get('DJANGO_DEBUG', True)
+DEBUG = False # config.get('DJANGO_DEBUG', True)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -27,6 +27,7 @@ THIRD_PARTY_APPS = [
 
 CUSTOM_APPS = [
     'common_app',
+    'url_management',
 ]
 
 INSTALLED_APPS = INSTALLED_APPS + THIRD_PARTY_APPS + CUSTOM_APPS
